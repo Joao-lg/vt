@@ -5,7 +5,8 @@
             @toPoint="openPOI"
             @more="more = true"
             @fullyLoaded="loaded = true"
-            @mapUpdate="goToZone"/>
+            @mapUpdate="goToZone"
+        />
     </main>
 </template>
 <script>
@@ -15,7 +16,17 @@ export default {
 	layout: 'tour',
     data() {
         return {
-            newLoc: '',
+            newLoc: 'cena-1',
+            loaded: false,
+            more: false
+        }
+    },
+    methods: {
+        goToZone() {
+
+        },
+        openPOI() {
+
         }
     }
 }

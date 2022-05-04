@@ -21,6 +21,9 @@ export default {
         href: 'https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap',
       },
     ],
+    script: [
+      { src: 'https://aframe.io/releases/1.0.4/aframe.min.js' },
+    ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css

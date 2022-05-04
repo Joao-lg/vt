@@ -27,9 +27,9 @@ export default {
 			}, 3000);
 		},
 		onbeforeunload() {
-			window.onbeforeunload = function(){
-				localStorage.clear()
-			}
+			// window.onbeforeunload = function(){
+			// 	localStorage.clear()
+			// }
 		}
 	}
 }

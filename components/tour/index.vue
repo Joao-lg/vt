@@ -6,6 +6,7 @@
 
 <script>
 /* eslint-disable camelcase */
+// import * as AFRAME  from 'aframe';
 import * as THREE from 'three';
 import { data } from '@/assets/json/locations.json'
 import tiles from '@/assets/json/tiles.json'
@@ -43,7 +44,7 @@ export default {
 
     loc(val) {
       const newLoc =
-        data.filter((el) => el.name.toLowerCase() === val) || []
+        data.filter((el) => el.slug === val) || []
       if (newLoc.length) {
         this.worker(newLoc[0].id)
         this.navigate(null, newLoc[0].id.toString())
@@ -123,7 +124,7 @@ export default {
 
     runNavigation(currentLocation) {
       const navigationLinks = this.getNavigation(currentLocation)
-
+      console.log(navigationLinks)
       if (navigationLinks.length) {
         navigationLinks.forEach((link) => {
           const { location_id, yaw, pitch } = link
@@ -672,14 +673,15 @@ export default {
       let assets = ''
       const locs = this.getNavigation(1)
       const firstAssets = []
-      for (let i = 0; i < locs.length; i++) {
-        const element = locs[i]
-        data.forEach((loc) => {
-          if (loc.id === element.location_id) {
-            if (!firstAssets.includes(loc)) firstAssets.push(loc)
-          }
-        })
-      }
+      console.log(locs)
+      // for (let i = 0; i < locs.length; i++) {
+      //   const element = locs[i]
+      //   data.forEach((loc) => {
+      //     if (loc.id === element.location_id) {
+      //       if (!firstAssets.includes(loc)) firstAssets.push(loc)
+      //     }
+      //   })
+      // }
 
       firstAssets.push(
         {
@@ -716,19 +718,20 @@ export default {
 
     renderCamera() {
       const [{ initialView }] = data
-      return `
-                <a-camera
-                    position="0 0 0"
-                    cursor="rayOrigin: mouse"
-                    wasd-controls-enabled="false"
-                    touch-look-controls="initialYaw:${
-                      Math.PI * 0.5 - initialView.yaw
-                    }; initialPitch:${Math.PI * 0.1 - initialView.pitch}"
-                    mouse
-                    camera
-                    zoom="1"
-                >
-                </a-camera>`
+      console.log(initialView)
+      // return `
+      //           <a-camera
+      //               position="0 0 0"
+      //               cursor="rayOrigin: mouse"
+      //               wasd-controls-enabled="false"
+      //               touch-look-controls="initialYaw:${
+      //                 Math.PI * 0.5 - initialView.yaw
+      //               }; initialPitch:${Math.PI * 0.1 - initialView.pitch}"
+      //               mouse
+      //               camera
+      //               zoom="1"
+      //           >
+      //           </a-camera>`
     },
   },
 }
