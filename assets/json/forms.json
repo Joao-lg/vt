@@ -1,0 +1,86 @@
+{
+    "login": [
+        {
+            "name": "email",
+            "type": "email",
+            "label": "E-mail",
+            "size": "100"
+        },
+        {
+            "name": "password",
+            "type": "password",
+            "label": "Palavra-Passe",
+            "size": "100"
+        }
+    ],
+    "recover_password": [
+        {
+            "name": "email",
+            "type": "email",
+            "label": "E-mail",
+            "size": "100"
+        }
+    ],
+    "regist": [
+        {
+            "name": "email",
+            "type": "text",
+            "label": "*E-mail",
+            "size": "50"
+        },
+        {
+            "name": "password",
+            "type": "password",
+            "label": "Palavra-Passe",
+            "size": "50"
+        },
+        {
+            "name": "name",
+            "type": "text",
+            "label": "*Nome",
+            "size": "50"
+        },
+        {
+            "name": "visit_id",
+            "type": "text",
+            "label": "Id Visita",
+            "size": "50"
+        },
+        {
+            "name": "country_id",
+            "type": "select",
+            "options": [
+                {
+                    "name": "pt",
+                    "label": "Portugal"
+                },
+                {
+                    "name": "es",
+                    "label": "Espanha"
+                },
+                {
+                    "name": "usa",
+                    "label": "Estados Unidos"
+                },
+                {
+                    "name": "uk",
+                    "label": "United Kingdom"
+                }
+            ],
+            "label": "País",
+            "size": "50"
+        },
+        {
+            "name": "city",
+            "type": "text",
+            "label": "Cidade",
+            "size": "50"
+        },
+        {
+            "name": "enterprise",
+            "type": "text",
+            "label": "enterprise",
+            "size": "50"
+        }
+    ]
+}

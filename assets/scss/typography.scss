@@ -1,0 +1,64 @@
+.md-title {
+  font-family: $font;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 400;
+
+  @media screen and (min-width: 768px) {
+    font-size: 30px;
+    line-height: 42px;
+  }
+}
+
+.xs-title {
+  font-family: $font;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 400;
+
+  @media screen and (min-width: 1100px) {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  @media screen and (min-width: 1700px) {
+    font-size: 25px;
+    line-height: 32px;
+  }
+}
+
+.text {
+  font-family: $font;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  @media screen and (min-width: 1100px) {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
+.md-text {
+  font-family: $font;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+.sm-text {
+  font-family: $font;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}

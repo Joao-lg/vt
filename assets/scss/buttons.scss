@@ -1,0 +1,13 @@
+.button {
+  @extend .sm-text;
+  font-weight: 700;
+  color: $white;
+  background-color: $red;
+  padding: 12px 64px;
+  border-radius: 6px;
+  transition: .2s;
+
+  &:hover {
+    background-color: rgba($red, .5);
+  }
+}

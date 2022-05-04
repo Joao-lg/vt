@@ -1,0 +1,103 @@
+{
+    "title": "Xplora Template",
+    "langs": [
+        "pt",
+        "en"
+    ],
+    "logo": {
+        "path": "imgs/main_logo.svg",
+        "alt": "xplora"
+    },
+    "background": {
+        "path": "imgs/img1.jpg",
+        "alt": "xplora"
+    },
+    "tutorial": [
+        {
+            "type": "timeline",
+            "title": "Timeline",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+            "items": [
+                {
+                    "type": "scene",
+                    "title": "Zone 01"
+                },
+                {
+                    "type": "scene",
+                    "title": "Zone 02"
+                },
+                {
+                    "type": "scene",
+                    "title": "Zone 03"
+                },
+                {
+                    "type": "scene",
+                    "title": "Zone 04"
+                },
+                {
+                    "type": "quiz",
+                    "title": "Zone 05"
+                },
+                {
+                    "type": "scene",
+                    "title": "Zone 06"
+                }
+            ]
+        },
+        {
+            "type": "poi",
+            "title": "Point of Interest (POI’s) ",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+            "image": {
+                "path": "/imgs/img2.png",
+                "alt": "xplora"
+            }
+        }
+    ],
+    "select_tour": [
+        {
+            "title": "Standart tour",
+            "price": 5,
+            "features": [
+                {
+                    "name": "360 Tour",
+                    "active": true
+                },
+                {
+                    "name": "Virtual Guide",
+                    "active": false
+                },
+                {
+                    "name": "Live Chat",
+                    "active": false
+                },
+                {
+                    "name": "Quiz/Gamification",
+                    "active": false
+                }
+            ]
+        },
+        {
+            "title": "Premium tour",
+            "price": 20,
+            "features": [
+                {
+                    "name": "360 Tour",
+                    "active": true
+                },
+                {
+                    "name": "Virtual Guide",
+                    "active": true
+                },
+                {
+                    "name": "Live Chat",
+                    "active": true
+                },
+                {
+                    "name": "Quiz/Gamification",
+                    "active": true
+                }
+            ]
+        }
+    ]
+}

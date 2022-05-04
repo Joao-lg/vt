@@ -1,0 +1,545 @@
+{
+    "code": 200,
+    "data": [
+        {
+            "id": 1,
+            "name": "Cena 1",
+            "slug": "cena-1",
+            "backgroundImage": "/360/new/grow.jpg",
+            "camera": {
+                "position": {
+                    "x": 0.7941890562239605,
+                    "y": 1.6349107180350917,
+                    "z": 1.8297732058209684
+                },
+                "rotation": {
+                    "_x": -0.01907694505747134,
+                    "_y": 0.40943354075714955,
+                    "_z": 0.00759511169236735,
+                    "_order": "XYZ"
+                }
+            },
+            "hotspots": [
+                {
+                    "id": 21,
+                    "name": "POI - Welcome",
+                    "slug": "poi-welcome",
+                    "type": "content",
+                    "icon": [
+                        {
+                            "id": 3,
+                            "media_id": 3,
+                            "media_cloud_id": 648,
+                            "title": "POI",
+                            "description": "[No description provided]",
+                            "content": null,
+                            "state": 0
+                        }
+                    ],
+                    "aframeOptions": {
+                        "position": false,
+                        "rotation": false,
+                        "scale": false
+                    }
+                },
+                {
+                    "id": 22,
+                    "name": "Peanuts",
+                    "slug": "peanuts",
+                    "type": "content",
+                    "icon": [
+                        {
+                            "id": 3,
+                            "media_id": 3,
+                            "media_cloud_id": 648,
+                            "title": "POI",
+                            "description": "[No description provided]",
+                            "content": null,
+                            "state": 0
+                        }
+                    ],
+                    "aframeOptions": {
+                        "position": false,
+                        "rotation": false,
+                        "scale": false
+                    }
+                },
+                {
+                    "id": 23,
+                    "name": "Reception",
+                    "slug": "reception",
+                    "type": "content",
+                    "icon": [
+                        {
+                            "id": 1,
+                            "media_id": 1,
+                            "media_cloud_id": 641,
+                            "title": "apple-icon-60x60",
+                            "description": "[No description provided]",
+                            "content": null,
+                            "state": 0
+                        }
+                    ],
+                    "aframeOptions": {
+                        "position": false,
+                        "rotation": false,
+                        "scale": false
+                    }
+                },
+                {
+                    "id": 24,
+                    "name": "Reception 2",
+                    "slug": "reception-2",
+                    "type": "content",
+                    "icon": [
+                        {
+                            "id": 1,
+                            "media_id": 1,
+                            "media_cloud_id": 641,
+                            "title": "apple-icon-60x60",
+                            "description": "[No description provided]",
+                            "content": null,
+                            "state": 0
+                        }
+                    ],
+                    "aframeOptions": {
+                        "position": false,
+                        "rotation": false,
+                        "scale": false
+                    }
+                },
+                {
+                    "id": 25,
+                    "name": "POI 1",
+                    "slug": "poi-1",
+                    "type": "content",
+                    "icon": [
+                        {
+                            "id": 2,
+                            "media_id": 2,
+                            "media_cloud_id": 647,
+                            "title": "Screenshot_33",
+                            "description": "[No description provided]",
+                            "content": null,
+                            "state": 0
+                        }
+                    ],
+                    "aframeOptions": {
+                        "position": false,
+                        "rotation": false,
+                        "scale": false
+                    }
+                },
+                {
+                    "id": 26,
+                    "name": "POI 1",
+                    "slug": "poi-1-2",
+                    "type": "content",
+                    "icon": [
+                        {
+                            "id": 2,
+                            "media_id": 2,
+                            "media_cloud_id": 647,
+                            "title": "Screenshot_33",
+                            "description": "[No description provided]",
+                            "content": null,
+                            "state": 0
+                        }
+                    ],
+                    "aframeOptions": {
+                        "position": {
+                            "x": -0.55717,
+                            "y": 0.86578,
+                            "z": -3.98789
+                        },
+                        "scale": {
+                            "x": 1,
+                            "y": 1,
+                            "z": 1
+                        },
+                        "rotation": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                },
+                {
+                    "id": 27,
+                    "name": "POI",
+                    "slug": "poi",
+                    "type": "content",
+                    "icon": [
+                        {
+                            "id": 1,
+                            "media_id": 1,
+                            "media_cloud_id": 641,
+                            "title": "apple-icon-60x60",
+                            "description": "[No description provided]",
+                            "content": null,
+                            "state": 0
+                        }
+                    ],
+                    "aframeOptions": {
+                        "position": {
+                            "x": -2.57326,
+                            "y": 2.11426,
+                            "z": -4
+                        },
+                        "scale": {
+                            "x": 1,
+                            "y": 1,
+                            "z": 1
+                        },
+                        "rotation": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                },
+                {
+                    "id": 28,
+                    "name": "test",
+                    "slug": "test",
+                    "type": "content",
+                    "icon": [
+                        {
+                            "id": 1,
+                            "media_id": 1,
+                            "media_cloud_id": 641,
+                            "title": "apple-icon-60x60",
+                            "description": "[No description provided]",
+                            "content": null,
+                            "state": 0
+                        }
+                    ],
+                    "aframeOptions": {
+                        "position": false,
+                        "rotation": false,
+                        "scale": false
+                    }
+                },
+                {
+                    "id": 29,
+                    "name": "POI",
+                    "slug": "poi-2",
+                    "type": "content",
+                    "icon": [
+                        {
+                            "id": 1,
+                            "media_id": 1,
+                            "media_cloud_id": 641,
+                            "title": "apple-icon-60x60",
+                            "description": "[No description provided]",
+                            "content": null,
+                            "state": 0
+                        }
+                    ],
+                    "aframeOptions": {
+                        "position": false,
+                        "rotation": false,
+                        "scale": false
+                    }
+                }
+            ],
+            "navigationPoints": [
+                {
+                    "name": "Hotspot 1",
+                    "slug": "hotspot-1",
+                    "id": 4,
+                    "sceneId": 1,
+                    "targetId": 1,
+                    "icon": [],
+                    "aframeOptions": {
+                        "position": false,
+                        "rotation": false,
+                        "scale": false
+                    }
+                },
+                {
+                    "name": "Hotspot 2",
+                    "slug": "hotspot-2",
+                    "id": 5,
+                    "sceneId": 1,
+                    "targetId": 1,
+                    "icon": [],
+                    "aframeOptions": {
+                        "position": false,
+                        "rotation": false,
+                        "scale": false
+                    }
+                },
+                {
+                    "name": "Hotspot 1",
+                    "slug": "hotspot-1-2",
+                    "id": 6,
+                    "sceneId": 1,
+                    "targetId": 1,
+                    "icon": [
+                        {
+                            "id": 4,
+                            "media_id": 4,
+                            "media_cloud_id": 649,
+                            "title": "pon",
+                            "description": "[No description provided]",
+                            "content": null,
+                            "state": 0
+                        }
+                    ],
+                    "aframeOptions": {
+                        "position": {
+                            "x": -0.6858,
+                            "y": 1.97265,
+                            "z": -5.34764
+                        },
+                        "scale": {
+                            "x": 1,
+                            "y": 1,
+                            "z": 1
+                        },
+                        "rotation": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                },
+                {
+                    "name": "Hotspot 1",
+                    "slug": "hotspot-1-3",
+                    "id": 7,
+                    "sceneId": 1,
+                    "targetId": 3,
+                    "icon": [
+                        {
+                            "id": 1,
+                            "media_id": 1,
+                            "media_cloud_id": 641,
+                            "title": "apple-icon-60x60",
+                            "description": "[No description provided]",
+                            "content": null,
+                            "state": 0
+                        }
+                    ],
+                    "aframeOptions": {
+                        "position": {
+                            "x": -2.59045,
+                            "y": 0.86049,
+                            "z": -4
+                        },
+                        "scale": {
+                            "x": 1,
+                            "y": 1,
+                            "z": 1
+                        },
+                        "rotation": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                }
+            ],
+            "interactiveObjects": [
+                {
+                    "name": "Cube",
+                    "slug": "cube",
+                    "type": "geometry",
+                    "id": 11,
+                    "targetId": null,
+                    "hotspotableType": null,
+                    "hotspotableId": null,
+                    "aframeOptions": {
+                        "primitive": "box",
+                        "color": "#e60039",
+                        "position": false,
+                        "rotation": false,
+                        "scale": false
+                    }
+                },
+                {
+                    "name": "Blue Cube",
+                    "slug": "blue-cube",
+                    "type": "geometry",
+                    "id": 12,
+                    "targetId": null,
+                    "hotspotableType": null,
+                    "hotspotableId": null,
+                    "aframeOptions": {
+                        "primitive": "box",
+                        "color": "#1144df",
+                        "position": false,
+                        "rotation": false,
+                        "scale": false
+                    }
+                },
+                {
+                    "name": "Green Cube",
+                    "slug": "green-cube",
+                    "type": "geometry",
+                    "id": 13,
+                    "targetId": null,
+                    "hotspotableType": null,
+                    "hotspotableId": null,
+                    "aframeOptions": {
+                        "primitive": "box",
+                        "color": "#3ac81e",
+                        "position": false,
+                        "rotation": false,
+                        "scale": false
+                    }
+                },
+                {
+                    "name": "Cube",
+                    "slug": "cube-2",
+                    "type": "geometry",
+                    "id": 14,
+                    "targetId": null,
+                    "hotspotableType": null,
+                    "hotspotableId": null,
+                    "aframeOptions": {
+                        "primitive": "box",
+                        "color": "#1db961",
+                        "position": false,
+                        "rotation": false,
+                        "scale": false
+                    }
+                },
+                {
+                    "name": "Cube",
+                    "slug": "cube-3",
+                    "type": "geometry",
+                    "id": 15,
+                    "targetId": null,
+                    "hotspotableType": null,
+                    "hotspotableId": null,
+                    "aframeOptions": {
+                        "position": {
+                            "x": 3.18546,
+                            "y": 0.53297,
+                            "z": -4
+                        },
+                        "scale": {
+                            "x": 1,
+                            "y": 1,
+                            "z": 1
+                        },
+                        "rotation": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        },
+                        "material": {
+                            "color": "#168d18"
+                        },
+                        "geometry": {
+                            "primitive": "triangle"
+                        }
+                    }
+                },
+                {
+                    "name": "Plane",
+                    "slug": "plane",
+                    "type": "geometry",
+                    "id": 16,
+                    "targetId": null,
+                    "hotspotableType": null,
+                    "hotspotableId": null,
+                    "aframeOptions": {
+                        "primitive": "plane",
+                        "color": "#6c1fe0",
+                        "position": false,
+                        "rotation": false,
+                        "scale": false
+                    }
+                },
+                {
+                    "name": "Plane",
+                    "slug": "plane-2",
+                    "type": "geometry",
+                    "id": 17,
+                    "targetId": null,
+                    "hotspotableType": null,
+                    "hotspotableId": null,
+                    "aframeOptions": {
+                        "primitive": "plane",
+                        "color": "#6c1fe0",
+                        "position": false,
+                        "rotation": false,
+                        "scale": false
+                    }
+                },
+                {
+                    "name": "tete",
+                    "slug": "tete",
+                    "type": "geometry",
+                    "id": 18,
+                    "targetId": null,
+                    "hotspotableType": null,
+                    "hotspotableId": null,
+                    "aframeOptions": {
+                        "primitive": "cone",
+                        "color": "#1294a5",
+                        "position": false,
+                        "rotation": false,
+                        "scale": false
+                    }
+                }
+            ]
+        }
+    ],
+    "errors": null,
+    "debug": {
+        "time": {
+            "value": 86.338,
+            "unit": "miliseconds"
+        },
+        "exception": null,
+        "queries": [
+            {
+                "query": "select * from `end_users` where `id` = ? limit 1",
+                "bindings": [
+                    1
+                ],
+                "time": 2.45
+            },
+            {
+                "query": "select count(*) as aggregate from `virtual_scenes` where `id` = ?",
+                "bindings": [
+                    "1"
+                ],
+                "time": 0.37
+            },
+            {
+                "query": "select * from `virtual_scenes` where `id` = ? limit 1",
+                "bindings": [
+                    "1"
+                ],
+                "time": 0.23
+            },
+            {
+                "query": "select * from `virtual_hotspots` where `scene_id` = ?",
+                "bindings": [
+                    "1"
+                ],
+                "time": 1.75
+            },
+            {
+                "query": "select * from `virtual_points` where `scene_id` = ?",
+                "bindings": [
+                    "1"
+                ],
+                "time": 1.8
+            },
+            {
+                "query": "select * from `virtual_objects` where `scene_id` = ?",
+                "bindings": [
+                    "1"
+                ],
+                "time": 1.69
+            }
+        ],
+        "post": []
+    }
+}

@@ -1,0 +1,518 @@
+{
+    "tiles": [
+        {
+            "name": "1",
+            "text": "Epidemiologia e Estudo das Pandemias",
+            "color": "#a109f4",
+            "rotation": "0 -90.9 0",
+            "scale": "1.03 1 1.01",
+            "position": {
+                "x": -345,
+                "y": -160,
+                "z": 12.8
+            },
+            "blur": {
+                "position": {
+                    "x": -215,
+                    "y": -165,
+                    "z": 18
+                },
+                "scale": "200 250 200",
+                "rotation": "90 -95 0"
+            }
+        },
+        {
+            "name": "2",
+            "text": "Saúde Digital",
+            "color": "#1b61bb",
+            "rotation": "0 -90.9 0",
+            "scale": "1.03 1 1.01",
+            "position": {
+                "x": -344.7,
+                "y": -160,
+                "z": 13.1
+            },
+            "blur": {
+                "position": {
+                    "x": -210,
+                    "y": -165,
+                    "z": -100
+                },
+                "scale": "210 250 200",
+                "rotation": "90 -45 0"
+            }
+        },
+        {
+            "name": "3",
+            "text": "Saúde Ocupacional",
+            "color": "#d60500",
+            "rotation": "0 -91 0",
+            "scale": "1.03 1 1.01",
+            "position": {
+                "x": -344.7,
+                "y": -160,
+                "z": 12.8
+            },
+            "blur": {
+                "position": {
+                    "x": -225,
+                    "y": -165,
+                    "z": 142
+                },
+                "scale": "252 260 200",
+                "rotation": "90 -287 0"
+            }
+        },
+        {
+            "name": "4",
+            "text": "Populações Vulneráveis",
+            "color": "#41fff7",
+            "rotation": "0 -91 0",
+            "scale": "1.03 1 1.01",
+            "position": {
+                "x": -344.8,
+                "y": -160,
+                "z": 12.8
+            },
+            "blur": {
+                "position": {
+                    "x": -224,
+                    "y": -135,
+                    "z": 210
+                },
+                "scale": "240 217 200",
+                "rotation": "90 -280 0"
+            }
+        },
+        {
+            "name": "5",
+            "text": "Saúde e Bem-Estar",
+            "color": "#fffd57",
+            "rotation": "0 -91.5 0",
+            "scale": "1.03 1 1.01",
+            "position": {
+                "x": -343.82,
+                "y": -160,
+                "z": 13.2
+            },
+            "blur": {
+                "position": {
+                    "x": -233,
+                    "y": -125,
+                    "z": 267
+                },
+                "scale": "190 200 200",
+                "rotation": "90 -300 0"
+            }
+        },
+        {
+            "name": "6",
+            "text": "Saúde Ambiental",
+            "color": "#7d5120",
+            "rotation": "0 -91 0",
+            "scale": "1.03 1 1",
+            "position": {
+                "x": -346.4,
+                "y": -160,
+                "z": 14.4
+            },
+            "blur": {
+                "position": {
+                    "x": -275,
+                    "y": -125,
+                    "z": 320
+                },
+                "scale": "200 200 200",
+                "rotation": "90 -300 0"
+            }
+        },
+        {
+            "name": "7",
+            "text": "Serviços de Saúde",
+            "color": "#60f036",
+            "rotation": "0 -90 0",
+            "scale": "1.04 1 1.01",
+            "position": {
+                "x": -343,
+                "y": -160,
+                "z": 17.5
+            },
+            "blur": {
+                "position": {
+                    "x": -235,
+                    "y": -160,
+                    "z": -220
+                },
+                "scale": "210 250 200",
+                "rotation": "90 0 0"
+            }
+        },
+        {
+            "name": "8",
+            "text": "Políticas de Saúde",
+            "color": "#ffa71e",
+            "rotation": "0 -90.9 0",
+            "scale": "1.023 1 1.01",
+            "position": {
+                "x": -345.4,
+                "y": -160,
+                "z": 12.8
+            },
+            "blur": {
+                "position": {
+                    "x": -240,
+                    "y": -125,
+                    "z": -250
+                },
+                "scale": "210 210 200",
+                "rotation": "90 -30 0"
+            }
+        },
+        {
+            "name": "9",
+            "text": "Gestão da Saúde e da Doença",
+            "color": "#698f3f",
+            "rotation": "0 -91 0",
+            "scale": "1 1 1",
+            "position": {
+                "x": -344.8,
+                "y": -160,
+                "z": 6
+            },
+            "blur": {
+                "position": {
+                    "x": -290,
+                    "y": -120,
+                    "z": -320
+                },
+                "scale": "210 200 200",
+                "rotation": "90 -30 0"
+            }
+        }
+    ],
+    "phases": [
+        {
+            "name": "Nascer",
+            "image": "/360/points/svg/nascer.svg",
+            "position": {
+                "x": -4.4,
+                "y": 0.34,
+                "z": 4.37
+            },
+            "rotation": "0 165 0",
+            "height": 3.48,
+            "width": 2
+        },
+        {
+            "name": "Crescer",
+            "image": "/360/points/svg/crescer.svg",
+            "position": {
+                "x": -9.15,
+                "y": 0.5,
+                "z": 4.75
+            },
+            "rotation": "0 135 0",
+            "height": 5.05,
+            "width": 3
+        },
+        {
+            "name": "Juventude",
+            "image": "/360/points/svg/juventude.svg",
+            "position": {
+                "x": -9.35,
+                "y": 0.44,
+                "z": 1.65
+            },
+            "rotation": "0 110 0",
+            "height": 4.35,
+            "width": 2.7
+        },
+        {
+            "name": "Vida Adulta",
+            "image": "/360/points/svg/adulto.svg",
+            "position": {
+                "x": -9.4,
+                "y": 0.43,
+                "z": -1.19
+            },
+            "rotation": "0 80 0",
+            "height": 4.3,
+            "width": 2.64
+        },
+        {
+            "name": "Envelhecimento",
+            "image": "/360/points/svg/envelhecimento.svg",
+            "position": {
+                "x": -9.2,
+                "y": 0.47,
+                "z": -4.24
+            },
+            "rotation": "0 50 0",
+            "height": 4.85,
+            "width": 2.96
+        },
+        {
+            "name": "Fim de Vida",
+            "image": "/360/points/svg/fim de vida.svg",
+            "position": {
+                "x": -8.9,
+                "y": 0.63,
+                "z": -8.2
+            },
+            "rotation": "0 20 0",
+            "height": 6.46,
+            "width": 3.95
+        }
+    ],
+    "bem-vindo": {
+        "name": "Sala Inicial",
+        "title": "Bem-vindo ao The Gate",
+        "description": "Tal como a sua vida, também esta visita segue o rumo que escolher: aproveitar cada etapa ou saltar para aquela com que mais se identifica.\n\nTambém pode optar por vaguear livremente pelo espaço.\n\nMas lembre-se, seja qual for a fase que visitar, verá que todos os ramos da saúde pública, aqui representados por um arco de nove cores, estão presentes de diferentes maneiras.\n\nNo canto superior esquerdo do seu ecrã poderá encontrar um símbolo da Saúde Pública onde são recolhidas, ao longo do percurso, temáticas e pontos de interesse mais relevantes desta visita. Para ter uma visão global e completa da Saúde Pública deverá visitar todos os pontos de interesse e alcançar a pontuação máxima.\n\nAprecie… e parta à descoberta.",
+        "type": "normal",
+        "images": [
+            "/images/esp.jpg"
+        ],
+        "extras": {
+            "audio": [
+                {
+                    "name": "Bem-Vindo",
+                    "path": "/audio/Locucao_BemVindo_Sala_Inicial.mp3"
+                }
+            ],
+            "videos": [
+                {
+                    "link": "/videos/thegatetest.mp4",
+                    "type": "normal"
+                }
+            ]
+        }
+    },
+    "sala-init": {
+        "name": "Sala Inicial",
+        "title": "Ficha Técnica",
+        "description": "Conteúdo Científico:\nEscola Nacional de Saúde Pública, Universidade NOVA de Lisboa\n\nGuião da Experiência:\nPedro Ribeiro (desenvolvimento de conteúdos) e Mariana Duque (pré-validação científica)\n\nVoz-off:\nPedro Ribeiro\n\nCoordenação Operacional:\nCarla Nunes | Teresa Magalhães | Marta Salavisa | Marta Moniz\n\nDesign e Programação:\nGema",
+        "type": "info",
+        "images": [
+            "/images/esp.jpg"
+        ],
+        "extras": {}
+    },
+    "sala-nascer": {
+        "name": "Sala Nascer",
+        "title": "Ficha Técnica",
+        "description": "Conteúdo Científico:\nEscola Nacional de Saúde Pública, Universidade NOVA de Lisboa\n\nConteúdo e Coordenação Científica:\nIsabel Loureiro | Ana Rita Goes | Susana Viegas\n\nGuião da Experiência:\nPedro Ribeiro (desenvolvimento de conteúdos) e Mariana Duque (pré-validação científica)\n\nVoz-off:\nPedro Ribeiro\n\nCoordenação Operacional:\nCarla Nunes | Teresa Magalhães | Marta Salavisa | Marta Moniz\n\nDesign e Programação:\nGema",
+        "type": "info",
+        "images": [
+            "/images/esp.jpg"
+        ],
+        "extras": {}
+    },
+    "baby_audio": {
+        "name": "Baby Laugh",
+        "type": "audio",
+        "link": "/audio/baby/baby_laugh.mp3"
+    },
+    "nascer": {
+        "name": "One health",
+        "title": "Title Example",
+        "type": "timeline",
+        "videos": [
+            {
+                "title": "Introdução",
+                "link": "/videos/nascer/FASE1_INTRO.mp4"
+            },
+            {
+                "title": "Transversalidade da Saúde e Bem-Estar",
+                "link": "/videos/nascer/FASE2_2PARTES.mp4"
+            }
+        ]
+    },
+    "counter": [
+        {
+            "name": "birth",
+            "interval": 200
+        }
+    ],
+    "sala-crescer": {
+        "name": "Sala Crescer",
+        "title": "Ficha Técnica",
+        "description": "Conteúdo Científico:\nEscola Nacional de Saúde Pública, Universidade NOVA de Lisboa\n\nConteúdo e Coordenação Científica:\nIsabel Loureiro | Ana Rita Goes\n\nGuião da Experiência:\nPedro Ribeiro (desenvolvimento de conteúdos) e Mariana Duque (pré-validação científica)\n\nVoz-off:\nPedro Ribeiro\n\nCoordenação Operacional:\nCarla Nunes | Teresa Magalhães | Marta Salavisa | Marta Moniz\n\nDesign e Programação:\nGema",
+        "type": "info",
+        "images": [
+            "/images/esp.jpg"
+        ],
+        "extras": {}
+    },
+    "sala-juventude": {
+        "name": "Sala Juventude",
+        "title": "Ficha Técnica",
+        "description": "Conteúdo Científico:\nEscola Nacional de Saúde Pública, Universidade NOVA de Lisboa\n\nConteúdo e Coordenação Científica:\nIsabel Loureiro | Ana Rita Goes | Julian Perelman\n\nGuião da Experiência:\nPedro Ribeiro (desenvolvimento de conteúdos) e Mariana Duque (pré-validação científica)\n\nVoz-off:\nPedro Ribeiro\n\nCoordenação Operacional:\nCarla Nunes | Teresa Magalhães | Marta Salavisa | Marta Moniz\n\nDesign e Programação:\nGema",
+        "type": "info",
+        "images": [
+            "/images/esp.jpg"
+        ],
+        "extras": {}
+    },
+    "sala-adulto": {
+        "name": "Sala Adulto",
+        "title": "Ficha Técnica",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi consectetur lectus vitae dui euismod aliquam non id lectus. Nam sed pretium felis, tristique ultricies lectus. Sed malesuada, ipsum ultricies porttitor scelerisque, metus massa consequat arcu, id posuere tortor arcu sed velit. Ut aliquet sapien vel eros porta semper. In at justo a purus pharetra sagittis. Vivamus eros justo, consequat eu posuere nec, porttitor consequat diam. Nam ut ultrices elit. Donec risus est, lacinia ut faucibus eget, porta at mauris. Morbi eu leo lorem. Integer et tellus felis. Pellentesque ac nisi ut diam consectetur condimentum id sit amet mauris. Sed tristique porta pellentesque. Duis sapien eros, ullamcorper ac ipsum ac, ullamcorper tincidunt est. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc gravida et dui vitae porttitor.\n\nCras id nulla rutrum, semper ex sed, porta metus. Quisque ultricies pretium nisl, in dictum libero euismod eget. Mauris dictum ante tincidunt urna consectetur, sit amet facilisis ante porta. Nulla eget dictum libero. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam sollicitudin sem dolor. Nunc augue nibh, tristique faucibus venenatis vel, luctus sed magna. In quis diam augue. Maecenas interdum justo eget dapibus lobortis. Proin tincidunt tristique massa, vitae luctus lectus dignissim eget.",
+        "type": "info",
+        "images": [
+            "/images/esp.jpg"
+        ],
+        "extras": {}
+    },
+    "grow-timeline": {
+        "name": "Políticas de Saúde",
+        "title": "Title Example",
+        "type": "timeline",
+        "videos": [
+            {
+                "title": "Enquadramento geral",
+                "link": "/videos/crescer/FASE4_V2.mp4"
+            },
+            {
+                "title": "Nova York",
+                "link": "/videos/crescer/FASE5_V2.mp4"
+            },
+            {
+                "title": "Londres",
+                "link": "/videos/crescer/FASE6.mp4"
+            },
+            {
+                "title": "Lisboa",
+                "link": "/videos/crescer/FASE7.mp4"
+            }
+        ]
+    },
+    "nascer-diagrama": {
+        "name": "Saúde e bem-estar",
+        "title": "Saúde e bem-estar",
+        "type": "image",
+        "images": [
+            "/images/diagram/0.png",
+            "/images/diagram/1.png",
+            "/images/diagram/2.png"
+        ],
+        "voice_over": "/audio/nascer/phase3_diagrama.mp3"
+    },
+
+    "left_tree": {
+        "name": "Comportamentos Saudáveis",
+        "title": "Comportamentos Saudáveis",
+        "type": "video",
+        "video": "/videos/crescer/FASE3.mp4"
+    },
+
+    "right_tree": {
+        "name": "Políticas de saúde",
+        "title": "Políticas de saúde",
+        "type": "video",
+        "video": "/videos/crescer/FASE8.mp4"
+    },
+
+    "phase4": {
+        "name": "Saúde e Aquecimento Global",
+        "title": "Saúde e Aquecimento Global",
+        "type": "video",
+        "video": "/videos/nascer/FASE4.mp4"
+    },
+
+    "phase5": {
+        "name": "Do Pangolim à Pangeia",
+        "title": "Do Pangolim à Pangeia",
+        "type": "video",
+        "video": "/videos/nascer/FASE5_V2.mp4",
+        "know_more": {
+            "external": "https://www.ensp.unl.pt/estudo-da-ensp-nova-faz-previsao-da-evolucao-da-covid-19-em-portugal/"
+        }
+    },
+
+    "phase6": {
+        "name": "Carga de Trabalhos",
+        "title": "Carga de Trabalhos",
+        "type": "video",
+        "video": "/videos/nascer/FASE6.mp4"
+    },
+
+    "youth_quiz": {
+        "name": "Boletim de voto",
+        "type": "quiz",
+        "bg": "/images/youth/paper_bg.jpg",
+        "options": [
+            {
+                "id": 1,
+                "text": "Políticas de Saúde e Determinantes Sociais"
+            },
+            {
+                "id": 2,
+                "text": "Políticas de Saúde e Populações Vulneráveis"
+            },
+            {
+                "id": 3,
+                "text": "Alterações Climáticas"
+            },
+            {
+                "id": 5,
+                "text": "Determinantes Sociais + Saúde e Bem-Estar"
+            }
+        ]
+    },
+
+    "juve_phase3_4": {
+        "name": "Desigualdades Sociais 1",
+        "title": "Desigualdades Sociais 1",
+        "type": "video",
+        "video": "/videos/juventude/FASE3.mp4"
+    },
+
+    "juve_phase5": {
+        "name": "Desigualdades Sociais 2",
+        "title": "Desigualdades Sociais 2",
+        "type": "video",
+        "video": "/videos/juventude/FASE5.mp4"
+    },
+
+    "juve_megaphone": {
+        "name": "Alterações Climáticas",
+        "title": "Alterações Climáticas",
+        "type": "voiceover",
+        "voice": "/audio/juventude/megafone.mp3"
+    },
+
+    "juve_scale": {
+        "name": "Saúde é Equilíbrio",
+        "title": "Saúde é Equilíbrio",
+        "type": "voiceover",
+        "voice": "/audio/juventude/scale.mp3"
+    },
+
+    "megafone_adult": {
+        "name": "Saúde Ocupacional - Megafone",
+        "title": "Saúde Ocupacional - Megafone",
+        "type": "voiceover",
+        "voice": "/audio/adult/megafone_adult.mp3"
+    },
+
+    "adult_phase3": {
+        "name": "Saúde Ocupacional",
+        "title": "Saúde Ocupacional",
+        "type": "video",
+        "video": "/videos/adult/FASE3.mp4"
+    },
+
+    "adult_phase5": {
+        "name": "Estilos de vida saudáveis",
+        "title": "Estilos de Vida Saudáveis",
+        "type": "video",
+        "video": "/videos/adult/FASE5.mp4"
+    },
+
+    "growold_phase1": {
+        "name": "Políticas de Saúde",
+        "title": "Políticas de Saúde",
+        "type": "video",
+        "video": "/videos/growold/FASE1.mp4"
+    }
+}
