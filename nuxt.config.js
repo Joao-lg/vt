@@ -23,6 +23,7 @@ export default {
     ],
     script: [
       { src: 'https://aframe.io/releases/1.0.4/aframe.min.js' },
+      { src: '/js/a-frame-touch-look-controls.js' },
     ]
   },
 

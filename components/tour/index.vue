@@ -69,6 +69,10 @@ export default {
   methods: {
     handleScroll(data) {
       const camera = document.querySelector('a-camera')
+      if(!camera) {
+        console.log('undefined')
+        return
+      }
       if (data.deltaY < 0 && this.zoom >= 1 && this.zoom < 3)
         camera.setAttribute('zoom', (this.zoom += 0.1))
       if (data.deltaY > 0 && this.zoom > 1 && this.zoom <= 3.1)
@@ -717,21 +721,20 @@ export default {
     },
 
     renderCamera() {
-      const [{ initialView }] = data
-      console.log(initialView)
-      // return `
-      //           <a-camera
-      //               position="0 0 0"
-      //               cursor="rayOrigin: mouse"
-      //               wasd-controls-enabled="false"
-      //               touch-look-controls="initialYaw:${
-      //                 Math.PI * 0.5 - initialView.yaw
-      //               }; initialPitch:${Math.PI * 0.1 - initialView.pitch}"
-      //               mouse
-      //               camera
-      //               zoom="1"
-      //           >
-      //           </a-camera>`
+      const [{ camera }] = data
+      return `
+        <a-camera
+            position="0 0 0"
+            cursor="rayOrigin: mouse"
+            wasd-controls-enabled="false"
+            touch-look-controls="initialYaw:${
+              Math.PI * 0.5 - camera.position.y
+            }; initialPitch:${Math.PI * 0.1 - camera.position.x}"
+            mouse
+            camera
+            zoom="1"
+        >
+        </a-camera>`
     },
   },
 }
