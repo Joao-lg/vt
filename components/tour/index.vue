@@ -69,10 +69,6 @@ export default {
   methods: {
     handleScroll(data) {
       const camera = document.querySelector('a-camera')
-      if(!camera) {
-        console.log('undefined')
-        return
-      }
       if (data.deltaY < 0 && this.zoom >= 1 && this.zoom < 3)
         camera.setAttribute('zoom', (this.zoom += 0.1))
       if (data.deltaY > 0 && this.zoom > 1 && this.zoom <= 3.1)
@@ -128,14 +124,13 @@ export default {
 
     runNavigation(currentLocation) {
       const navigationLinks = this.getNavigation(currentLocation)
-      console.log(navigationLinks)
       if (navigationLinks.length) {
         navigationLinks.forEach((link) => {
-          const { location_id, yaw, pitch } = link
-          const pos = this.corrected({ pitch, yaw })
-          const position = this.polar3dToCartesian(pos.pitch, pos.yaw)
+          const { id, aframeOptions } = link
+          const pos = this.corrected({y: aframeOptions.position.y, z: aframeOptions.position.z})
+          const position = this.polar3dToCartesian(pos.y, pos.z)
           const sphere = this.addSphere({
-            locationId: location_id,
+            locationId: id,
             radius: 1,
             position,
             currentLocation,
@@ -144,17 +139,17 @@ export default {
           const assetsComp = document.querySelector('a-assets')
           const existingAssets = Array.from(assetsComp.children)
           const found = existingAssets.some(
-            (el) => el.id === `location-${link.location_id}`
+            (el) => el.id === `location-${link.id}`
           )
-
+          
           if (!found) {
-            this.addInterdit({ position, location_id })
+            this.addInterdit({ position, id })
             const img = document.createElement('img')
-            img.setAttribute('id', `location-${link.location_id}`)
+            img.setAttribute('id', `location-${link.id}`)
             img.setAttribute(
               'data-src',
               `https://goxplora.fra1.digitaloceanspaces.com/esp${
-                data[link.location_id - 1].background
+                data[link.id - 1].background
               }`
             )
             assetsComp.append(img)
@@ -173,7 +168,7 @@ export default {
               const objectURL = URL.createObjectURL(imageData.blob)
 
               imageElement[0].onload = () => {
-                const load = document.querySelector(`#load${location_id}`)
+                const load = document.querySelector(`#load${id}`)
                 if (load) load.remove()
                 sphere.addEventListener('click', this.navigate)
                 imageElement[0].removeAttribute('data-src')
@@ -340,7 +335,7 @@ export default {
 
     addPoint(options) {
       const { siteId, position } = options
-
+      console.log(siteId, "sideid")
       if (siteId === 'tiles') return this.semiCircle(tiles[siteId])
       else if (siteId === 'phases') return this.phases(tiles[siteId])
       else if (siteId.includes('_audio'))
@@ -570,16 +565,16 @@ export default {
 
     corrected(position) {
       return {
-        pitch: Math.PI * 0.5 + position.pitch,
-        yaw: -Math.PI * 0.5 - position.yaw,
+        y: Math.PI * 0.5 + position.y,
+        z: -Math.PI * 0.5 - position.z,
       }
     },
 
     getNavigation(currentLocation) {
-      const [{ navigation_links }] = data.filter(
+      const [{ navigationPoints }] = data.filter(
         (location) => location.id === Number(currentLocation)
       )
-      return navigation_links
+      return navigationPoints
     },
 
     getInteractions(currentLocation) {
@@ -597,9 +592,12 @@ export default {
         (el) => el.id === Number(options.currentLocation)
       )[0]
 
+
       const newLocation = data.filter(
         (el) => el.id === options.locationId
       )[0]
+      
+      if(!newLocation) return false
 
       let attributes
 
@@ -678,14 +676,14 @@ export default {
       const locs = this.getNavigation(1)
       const firstAssets = []
       console.log(locs)
-      // for (let i = 0; i < locs.length; i++) {
-      //   const element = locs[i]
-      //   data.forEach((loc) => {
-      //     if (loc.id === element.location_id) {
-      //       if (!firstAssets.includes(loc)) firstAssets.push(loc)
-      //     }
-      //   })
-      // }
+      for (let i = 0; i < locs.length; i++) {
+        const element = locs[i]
+        data.forEach((loc) => {
+          if (loc.id === element.location_id) {
+            if (!firstAssets.includes(loc)) firstAssets.push(loc)
+          }
+        })
+      }
 
       firstAssets.push(
         {

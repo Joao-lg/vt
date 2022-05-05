@@ -8,9 +8,9 @@
             "backgroundImage": "/360/new/grow.jpg",
             "camera": {
                 "position": {
-                    "x": 0.7941890562239605,
-                    "y": 1.6349107180350917,
-                    "z": 1.8297732058209684
+                    "x": 0.2941890562239605,
+                    "y": 0.0349107180350917,
+                    "z": 0.0297732058209684
                 },
                 "rotation": {
                     "_x": -0.01907694505747134,
@@ -247,12 +247,16 @@
                 {
                     "name": "Hotspot 1",
                     "slug": "hotspot-1",
-                    "id": 4,
+                    "id": 2,
                     "sceneId": 1,
                     "targetId": 1,
                     "icon": [],
                     "aframeOptions": {
-                        "position": false,
+                        "position": {
+                            "x": 3.7941890562239605,
+                            "y": 3.0349107180350917,
+                            "z": -3.8297732058209684
+                        },
                         "rotation": false,
                         "scale": false
                     }
@@ -260,12 +264,16 @@
                 {
                     "name": "Hotspot 2",
                     "slug": "hotspot-2",
-                    "id": 5,
+                    "id": 2,
                     "sceneId": 1,
                     "targetId": 1,
                     "icon": [],
                     "aframeOptions": {
-                        "position": false,
+                        "position": {
+                            "x": 3.7941890562239605,
+                            "y": 3.0349107180350917,
+                            "z": 6.8297732058209684
+                        },
                         "rotation": false,
                         "scale": false
                     }

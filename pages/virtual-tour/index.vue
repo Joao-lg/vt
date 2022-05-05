@@ -22,8 +22,10 @@ export default {
         }
     },
     methods: {
-        goToZone() {
-
+        goToZone(e) {
+            this.voice_ended = false
+            this.newZone = e.name
+            // this.handleAudios(e)
         },
         openPOI() {
 
