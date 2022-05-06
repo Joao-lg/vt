@@ -14,4 +14,5 @@ export default {
   choose_tour: 'Choose your tour',
   recover: 'Recuperar Password',
   recover_success: 'Foi enviado um email',
+  loading: "Loading"
 }

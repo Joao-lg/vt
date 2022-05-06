@@ -7,6 +7,10 @@
             @fullyLoaded="loaded = true"
             @mapUpdate="goToZone"
         />
+        <div v-if="!loaded" class="loading">
+            <span>{{ $t('loading') }} virtual experience</span>
+            <div class="lds-dual-ring"></div>
+        </div>
     </main>
 </template>
 <script>
@@ -23,7 +27,8 @@ export default {
     },
     methods: {
         goToZone(e) {
-            this.voice_ended = false
+            console.log(e)
+            // this.voice_ended = false
             this.newZone = e.name
             // this.handleAudios(e)
         },
@@ -33,3 +38,24 @@ export default {
     }
 }
 </script>
+
+<style lang="scss" scoped>
+.loading {
+  position: fixed;
+  display: flex;
+  background-color: $black;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  text-transform: uppercase;
+
+  span {
+      @extend .text;
+      color: $white;
+      margin: 20px;
+  }
+}
+</style>

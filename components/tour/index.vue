@@ -138,14 +138,19 @@ export default {
 
           const assetsComp = document.querySelector('a-assets')
           const existingAssets = Array.from(assetsComp.children)
-          const found = existingAssets.some(
-            (el) => el.id === `location-${link.id}`
-          )
-          
-          if (!found) {
+          const found = null
+          // const found = existingAssets.some(
+          // (el) => {
+          //   // el.id === link.id
+          //   console.log(el.id, `location-${link.id}`)
+          //   return true
+          // }
+          // )
+          console.log(existingAssets)
+          if (found) {
             this.addInterdit({ position, id })
             const img = document.createElement('img')
-            img.setAttribute('id', `location-${link.id}`)
+            img.setAttribute('id', `${link.id}`)
             img.setAttribute(
               'data-src',
               `https://goxplora.fra1.digitaloceanspaces.com/esp${
@@ -230,11 +235,11 @@ export default {
       const interactionLinks = this.getInteractions(currentLocation)
       if (interactionLinks.length) {
         interactionLinks.forEach((link) => {
-          const { site_id, yaw, pitch } = link
-          const pos = this.corrected({ pitch, yaw })
-          const position = this.polar3dToCartesian(pos.pitch, pos.yaw)
+          const { id, aframeOptions } = link
+          const pos = this.corrected({ y: aframeOptions.position.x, z: aframeOptions.position.z })
+          const position = this.polar3dToCartesian(pos.y, pos.z)
           this.addPoint({
-            siteId: site_id,
+            id,
             position,
             type: link.type || '',
           })
@@ -334,21 +339,21 @@ export default {
     },
 
     addPoint(options) {
-      const { siteId, position } = options
-      console.log(siteId, "sideid")
-      if (siteId === 'tiles') return this.semiCircle(tiles[siteId])
-      else if (siteId === 'phases') return this.phases(tiles[siteId])
-      else if (siteId.includes('_audio'))
-        return this.transparentAudio(tiles[siteId], position)
-      else if (siteId.includes('counter'))
-        return this.counter(
-          tiles.counter.filter((el) =>
-            el.name.includes(siteId.replace('counter-', ''))
-          ),
-          position
-        )
+      const { id, position } = options
+      if (id === 'tiles') return this.semiCircle(tiles[id])
+      // else if (id === 'phases') return this.phases(tiles[id])
+      // else if (id.includes('_audio'))
+      //   return this.transparentAudio(tiles[id], position)
+      // else if (id.includes('counter'))
+      //   return this.counter(
+      //     tiles.counter.filter((el) =>
+      //       el.name.includes(id.replace('counter-', ''))
+      //     ),
+      //     position
+      //   )
       else {
         const plane = document.createElement('a-image')
+        console.log(plane)
         let icon
 
         switch (options.type) {
@@ -369,7 +374,7 @@ export default {
           position,
           material: `src: url(${icon})`,
           'look-at': { x: 0, y: 0, z: 0 },
-          'data-site': siteId,
+          'data-site': id,
           scale: options.type === 'info' ? '0.7 0.7 0.7' : '1 1 1',
           width: 1,
           height: 1,
@@ -399,7 +404,7 @@ export default {
           'click',
           (e) => {
             if (this.linkClicked === 0) {
-              this.interact(siteId)
+              this.interact(id)
             } else this.linkClicked = 0
           },
           false
@@ -578,10 +583,10 @@ export default {
     },
 
     getInteractions(currentLocation) {
-      const [{ interaction_links }] = data.filter(
+      const [{ hotspots }] = data.filter(
         (location) => location.id === Number(currentLocation)
       )
-      return interaction_links
+      return hotspots
     },
 
     addSphere(options) {
@@ -675,7 +680,6 @@ export default {
       let assets = ''
       const locs = this.getNavigation(1)
       const firstAssets = []
-      console.log(locs)
       for (let i = 0; i < locs.length; i++) {
         const element = locs[i]
         data.forEach((loc) => {
@@ -691,7 +695,7 @@ export default {
           background: '/360/new/init.jpg',
         },
         {
-          id: 3,
+          id: 2,
           background: '/360/new/grow.jpg',
         }
       )
