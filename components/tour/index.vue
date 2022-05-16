@@ -138,16 +138,10 @@ export default {
 
           const assetsComp = document.querySelector('a-assets')
           const existingAssets = Array.from(assetsComp.children)
-          const found = null
-          // const found = existingAssets.some(
-          // (el) => {
-          //   // el.id === link.id
-          //   console.log(el.id, `location-${link.id}`)
-          //   return true
-          // }
-          // )
-          console.log(existingAssets)
-          if (found) {
+          const found = existingAssets.some(
+            (el) => el.id === `location-${link.id}`
+          )
+          if (!found) {
             this.addInterdit({ position, id })
             const img = document.createElement('img')
             img.setAttribute('id', `${link.id}`)
@@ -173,6 +167,7 @@ export default {
               const objectURL = URL.createObjectURL(imageData.blob)
 
               imageElement[0].onload = () => {
+                console.log('oi')
                 const load = document.querySelector(`#load${id}`)
                 if (load) load.remove()
                 sphere.addEventListener('click', this.navigate)
@@ -185,7 +180,9 @@ export default {
 
             const imageURL = img.getAttribute('data-src')
             ImageLoaderWorker.postMessage(imageURL)
-          } else sphere.addEventListener('click', this.navigate)
+          } else {
+            sphere.addEventListener('click', this.navigate)
+          }
         })
       }
     },
@@ -287,15 +284,15 @@ export default {
     },
 
     setInitialView(locationId) {
-      const camera = document.querySelector('a-camera')
-      const [{ initialView }] = data.filter(
+      const cameraTag = document.querySelector('a-camera')
+      const [{ camera }] = data.filter(
         (location) => location.id === Number(locationId)
       )
 
-      const yaw = Math.PI * 0.5 - initialView.yaw
-      const pitch = Math.PI * 0.1 - initialView.pitch
+      const z = Math.PI * 0.5 - camera.position.z
+      const x = Math.PI * 0.1 - camera.position.x
 
-      camera.components['touch-look-controls'].change(pitch, yaw)
+      cameraTag.components['touch-look-controls'].change(x, z)
     },
 
     transition(cb) {
@@ -353,7 +350,7 @@ export default {
       //   )
       else {
         const plane = document.createElement('a-image')
-        console.log(plane)
+        // console.log(plane)
         let icon
 
         switch (options.type) {
@@ -422,122 +419,8 @@ export default {
       }
     },
 
-    transparentAudio(site, position) {
-      const plane = document.createElement('a-image')
-
-      const attributes = {
-        position,
-        'look-at': { x: 0, y: 0, z: 0 },
-        'data-site': site.name,
-        scale: '1 1 1',
-        width: 4,
-        height: 4,
-        visible: false,
-      }
-      for (const key in attributes) {
-        plane.setAttribute(key, attributes[key])
-      }
-
-      plane.addEventListener('click', () => {
-        if (!this.baby_laughing) {
-          this.baby_laughing = true
-          const listener = new THREE.AudioListener()
-
-          const sound = new THREE.Audio(listener)
-
-          const audioLoader = new THREE.AudioLoader()
-          audioLoader.load(
-            'https://goxplora.fra1.digitaloceanspaces.com/esp' + site.link,
-            function (buffer) {
-              sound.setBuffer(buffer)
-              sound.setLoop(false)
-              sound.setVolume(0.5)
-              sound.play()
-            }
-          )
-          setTimeout(() => {
-            this.baby_laughing = false
-          }, 3000)
-        }
-      })
-
-      this.sceneEl.appendChild(plane)
-      return plane
-    },
-
-    counter(info, position) {
-      const plane = document.createElement('a-entity')
-      const mainText = document.createElement('a-text')
-      const secundaryText = document.createElement('a-text')
-
-      const now = new Date()
-      const then = new Date(
-        now.getFullYear(),
-        now.getMonth(),
-        now.getDate(),
-        0,
-        0,
-        0
-      )
-      const diff = now.getTime() - then.getTime()
-      const secconds = diff / 1000
-
-      // each second equals around 5 lifes
-
-      const lifes = secconds * 5
-
-      const round = Math.round(lifes)
-      const locale = round.toLocaleString()
-
-      const textAttr = {
-        position,
-        value: locale,
-        font: '/fonts/RedHat.fnt',
-        fontImage: '/fonts/RedHat.png',
-        rotation: '0 -5 0',
-        'x-offset': -(locale.length / 1.55),
-        width: 50,
-        id: `counter-${info[0].name}`,
-      }
-
-      for (const key in textAttr) {
-        mainText.setAttribute(key, textAttr[key])
-      }
-
-      let plus = 0
-      setInterval(() => {
-        const value = round + plus
-        const newVal = value.toLocaleString()
-        mainText.setAttribute('value', newVal)
-        mainText.setAttribute('x-offset', -(newVal.length / 1.55))
-        plus++
-      }, info[0].interval)
-
-      plane.appendChild(mainText)
-
-      const secondTextAttr = {
-        position: { x: position.x, y: position.y - 1.7, z: position.z },
-        value: 'Mais um ser humano no mundo.',
-        font: '/fonts/RedHat.fnt',
-        fontImage: '/fonts/RedHat.png',
-        rotation: '0 0 0',
-        'x-offset': -(28 / 5.5),
-        width: 15,
-        id: `description-${info[0].name}`,
-      }
-
-      for (const key in secondTextAttr) {
-        secundaryText.setAttribute(key, secondTextAttr[key])
-      }
-
-      plane.appendChild(secundaryText)
-
-      this.sceneEl.appendChild(plane)
-      return plane
-    },
-
     addInterdit(options) {
-      const { position, location_id } = options
+      const { position, id } = options
       const load = document.createElement('a-image')
       const attributes = {
         position,
@@ -549,7 +432,7 @@ export default {
         rotation: '0 0 0',
         animation:
           'property: rotation; to: 0 0 -360; loop: true; dur: 1000; easing: linear;',
-        id: `load${location_id}`,
+        id: `load${id}`,
       }
 
       for (const key in attributes) {
@@ -688,15 +571,14 @@ export default {
           }
         })
       }
-
       firstAssets.push(
         {
-          id: 1,
-          background: '/360/new/init.jpg',
+          id: data[0].id,
+          background: data[0].backgroundImage,
         },
         {
-          id: 2,
-          background: '/360/new/grow.jpg',
+          id: data[1].id,
+          background: data[1].backgroundImage,
         }
       )
 
